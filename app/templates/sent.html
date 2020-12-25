@@ -1,0 +1,18 @@
+{% extends 'basic.html' %}
+
+{% block title %} sent {% endblock%}
+
+{% block content %} Sent Mesaages {% endblock %}
+
+{% block tbody %}
+
+{% for s in sender  %}
+<tr>
+<td>{{s.sub}}</td>
+<td>{{s.msg}}</td>
+<td>User-{{s.to}}</td>
+</tr>
+{% endfor %}
+
+{% endblock %}
+

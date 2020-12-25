@@ -1,0 +1,19 @@
+{% extends 'basic.html' %}
+
+{% block title %} User2 {% endblock%}
+
+{% block content %} User2 {% endblock %}
+
+{% block tbody %}
+
+{% for s in sender  %}
+{% ifequal s.to "2" %}
+<tr>
+<td>{{s.sub}}</td>
+<td>{{s.msg}}</td>
+</tr>
+{% endifequal %}
+{% endfor %}
+
+{% endblock %}
+
